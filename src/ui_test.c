@@ -6,6 +6,13 @@ int main(int argc, char ** argv){
     // Configura memoria y limpia la pantalla
     initscr();
 
+    // Posicion del cursor
+    int x, y;
+    x = y = 5;
+
+    // Mueve el cursor a una ubicacion especificada
+    move(y, x);
+    
     // Imprime una string en la ventana
     printw("Hola mundo");
 
