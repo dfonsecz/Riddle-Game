@@ -1,9 +1,7 @@
-#include<stdio.h>
-#include <stdlib.h>
+#include <stdio.h>
 #include <string.h>
-//#include <clasificacion.h>
-// incluir archivo de las preguntas 
-
+#include <stdlib.h>
+// Structure to store the question
 typedef struct {
     char pregunta[256];           
     char categoria[50];           
@@ -12,7 +10,7 @@ typedef struct {
 } Pregunta;
 
 
-void agregarPreguntasvoid(Pregunta **banco_Preguntas, int *numPreguntas, const char *pregunta, const char *categoria, const char opciones[4][50], int respuestaCorrecta){
+void agregarPregunta(Pregunta **banco_Preguntas, int *numPreguntas, const char *pregunta, const char *categoria, const char opciones[4][50], int respuestaCorrecta){
  
 
   *banco_Preguntas = realloc(*banco_Preguntas, (*numPreguntas + 1) * sizeof(Pregunta));
@@ -37,4 +35,3 @@ void agregarPreguntasvoid(Pregunta **banco_Preguntas, int *numPreguntas, const c
 }
 
 
-void eliminarPreguntas
