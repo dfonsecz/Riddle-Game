@@ -35,3 +35,28 @@ void agregarPregunta(Pregunta **banco_Preguntas, int *numPreguntas, const char *
 }
 
 
+void eliminarPreguntas( Pregunta **banco_Preguntas,int *numPreguntas, int indice){
+
+    if( indice <= 0 || indice >= numPreguntas ){
+
+        printf("indice invalido");
+        return; 
+    } 
+
+    for (int i = indice; i <= numPreguntas -1 ; i++){
+
+        (*banco_Preguntas)[i] = (*banco_Preguntas)[i + 1];
+
+    }
+
+    *banco_Preguntas = realloc(*banco_Preguntas, (*numPreguntas - 1) * sizeof(Pregunta));
+    if (*banco_Preguntas == NULL && *numPreguntas - 1 > 0) {
+        fprintf(stderr, "Error al asignar memoria\n");
+        exit(1);
+    }
+
+
+    (*numPreguntas)--;
+}
+
+
