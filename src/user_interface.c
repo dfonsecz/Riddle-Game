@@ -95,13 +95,19 @@ int main(int argc, char **argv) {
             mvwprintw(win, 0, menus[i].start_x, "%s", menus[i].text);
             wattroff(win, A_STANDOUT);
         }
+
+        // Salir del bucle si se presiona 'q' (por ejemplo)
+        if (choice == 'q') {
+            break;
+        }
     }
     
     // Retorna el valor int del key del user input
     getch();
 
     // Libera la memoria y cierra ncurses
-    endwin();
+    delwin(win);  // Libera la memoria asignada a la ventana
+    endwin();  // Cierra la librería ncurses
 
     return 0;
 }
