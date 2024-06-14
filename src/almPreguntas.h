@@ -59,4 +59,51 @@ void eliminarPreguntas( Pregunta **banco_Preguntas,int *numPreguntas, int indice
     (*numPreguntas)--;
 }
 
+void editarPregunta(Pregunta *banco_Preguntas, int numPreguntas) {
+    int opcion;
+    printf("Seleccione el número de la pregunta que desea editar (0-%d): ", numPreguntas - 1);
+    scanf("%d", &opcion);
+
+    if (opcion < 0 || opcion >= numPreguntas) {
+        printf("Opción inválida.\n");
+        return;
+    }
+
+    printf("Edición de la pregunta seleccionada:\n");
+    printf("1. Editar pregunta\n");
+    printf("2. Editar categoría\n");
+    printf("3. Editar opciones\n");
+    printf("4. Editar respuesta correcta\n");
+    printf("Seleccione la opción que desea editar: ");
+
+
+ int opcionEditar;
+    scanf("%d", &opcionEditar);
+    getchar(); // Consumir el salto de línea en el buffer
+
+    switch (opcionEditar) {
+        case 1:
+            printf("Introduzca la nueva pregunta: ");
+            fgets(banco_Preguntas[opcion].pregunta, sizeof(banco_Preguntas[opcion].pregunta), stdin);
+            break;
+        case 2:
+            printf("Introduzca la nueva categoría: ");
+            fgets(banco_Preguntas[opcion].categoria, sizeof(banco_Preguntas[opcion].categoria), stdin);
+            break;
+        case 3:
+            printf("Introduzca las nuevas opciones:\n");
+            for (int i = 0; i < 4; i++) {
+                printf("Opción %d: ", i + 1);
+                fgets(banco_Preguntas[opcion].opciones[i], sizeof(banco_Preguntas[opcion].opciones[i]), stdin);
+            }
+            break;
+        case 4:
+            printf("Introduzca la nueva respuesta correcta (0-3): ");
+            scanf("%d", &banco_Preguntas[opcion].respuestaCorrecta);
+            break;
+        default:
+            printf("Opción inválida.\n");
+            break;
+    }
+}
 
