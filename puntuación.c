@@ -45,3 +45,12 @@ int main() {
         {"¿Cuál es la capital de Francia?", {"Londres", "Madrid", "Berlin", "Paris"}, 3},
         {"¿Cuál es la película más taquillera de todos los tiempos?", {"Titanic", "Star Wars", "Avatar", "Avengers"}, 2},
         };
+        
+    int numPreguntas = sizeof(banco_Preguntas) / sizeof(banco_Preguntas[0]);
+
+    // Llamar a la función para manejar la puntuación
+    manejar_Puntuacion(banco_Preguntas, numPreguntas);
+
+    return 0;
+}  
+        
