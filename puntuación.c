@@ -37,3 +37,11 @@ void manejar_Puntuacion(Pregunta preguntas[], int numPreguntas) {
 
     printf("Puntuación final: %d\n", puntuacion);
 }
+int main() {
+    // Ejemplo de preguntas
+    Pregunta banco_Preguntas[] = {
+        {"¿Cuál es la fórmula química del agua?", {"H2O", "O2", "CO2", "H2"}, 0},
+        {"¿Quién fue el primer presidente de los Estados Unidos?", {"Lincoln", "Jefferson", "Washington", "Adams"}, 2},
+        {"¿Cuál es la capital de Francia?", {"Londres", "Madrid", "Berlin", "Paris"}, 3},
+        {"¿Cuál es la película más taquillera de todos los tiempos?", {"Titanic", "Star Wars", "Avatar", "Avengers"}, 2},
+        };
