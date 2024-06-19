@@ -38,6 +38,10 @@ void agregarNuevaPregunta(const char *nombre_archivo){
     fgets(Nuevapregunta.categoria, sizeof(Nuevapregunta.categoria), stdin);// leemos la pregunta con fgets desde la entrada estandar, sizeof para especificar el tama;o de liínea de entrada, prevenimos desbordamientos de buffer.
     Nuevapregunta.categoria[strcspn(Nuevapregunta.categoria, "\n")] = '\0'; // Eliminamos el caracter de nueva linea con strcspn
 
+    fprintf(archivo, "%s\n",
+    Nuevapregunta.categoria);
+
+    fclose(archivo);
 }
 
 int main() {
