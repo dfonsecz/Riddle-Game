@@ -1,42 +1,34 @@
-
-#include <stdlib.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
-#include "preguntas"
-
 
 typedef struct {
-    char pregunta;           
-    char categoria;           
-    char opciones[4];         
-    int respuestaCorrecta;        
+    char pregunta[256];
+    char categoria[50];
+    char opciones[4][100];
+    int respuestaCorrecta;
 } Pregunta;
 
-#include <stdio.h>
-#include <stdlib.h>
-
-void leer_preguntas(const char *nombre_archivo) {// funcion para abrir y leer el archivo
-    FILE *preguntas = fopen(nombre_archivo, "r");// abriendo el archivo en modo lectura
-    if (preguntas == NULL) {// verificar si esta nulo
+void leer_preguntas(const char *nombre_archivo) {
+    FILE *archivo = fopen(nombre_archivo, "r");
+    if (archivo == NULL) {
         perror("Error al abrir el archivo");
         return;
     }
 
     char linea[1024];
-    while (fgets(linea, sizeof(linea), preguntas)) {// leemos el archivo
-        printf("%s", linea);//imprimimos las preguntas
+    while (fgets(linea, sizeof(linea), archivo)) {
+        printf("%s", linea);
     }
 
-    fclose(preguntas);//cerramos el archivo
+    fclose(archivo);
 }
+
 
 int main() {
-    const char *preguntas = "preguntas.csv";
-    leer_preguntas(preguntas);
-    return 0;
+    const char *nombre_archivo = "preguntas.txt";
+     leer_preguntas(nombre_archivo);
 }
-
-
 
 
 
