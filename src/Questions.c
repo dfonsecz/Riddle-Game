@@ -31,4 +31,11 @@ int main() {
 }
 
 
+void agregarNuevaPregunta(const char *nombre_archivo){
+     FILE *archivo = fopen(nombre_archivo, "a");
+    if (archivo == NULL) {
+        perror("Error al abrir el archivo");
+        return;
+    }
 
+}
