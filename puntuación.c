@@ -40,10 +40,10 @@ void manejar_Puntuacion(Pregunta preguntas[], int numPreguntas) {
 int main() {
     // Ejemplo de preguntas
     Pregunta banco_Preguntas[] = {
-        {"¿Cuál es la fórmula química del agua?", {"H2O", "O2", "CO2", "H2"}, 0},
-        {"¿Quién fue el primer presidente de los Estados Unidos?", {"Lincoln", "Jefferson", "Washington", "Adams"}, 2},
-        {"¿Cuál es la capital de Francia?", {"Londres", "Madrid", "Berlin", "Paris"}, 3},
-        {"¿Cuál es la película más taquillera de todos los tiempos?", {"Titanic", "Star Wars", "Avatar", "Avengers"}, 2},
+       {"¿Cuál es la capital de Brasil", {"Brasilia", "Río de Janeiro", "Distrito Federal", "Bahía"}, 0},
+        {"¿Cuál es el animal más venenoso del mundo?", {"Alacrán", "La Cobra", "La Medusa", "Pez Piedra"}, 2},
+        {"¿Quién es el máximo goleador de la Selección Argentina de Fútbol?", {"Maradona", "Messi", "Gabriel Batistuta", "Sergio Agüero"}, 1},
+        {"¿Qué significa la expresión safe and sound en inglés?", {"Hola", "Entendido!", "Todo bien hasta ahora", "Sano y Salvo!"}, 3},
         };
         
     int numPreguntas = sizeof(banco_Preguntas) / sizeof(banco_Preguntas[0]);
