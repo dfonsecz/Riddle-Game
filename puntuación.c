@@ -19,12 +19,18 @@ void manejar_Puntuacion(Pregunta preguntas[], int numPreguntas) {
             printf("%d. %s\n", j + 1, preguntas[i].opciones[j]);
         }
 
-        printf("Introduce el número de tu respuesta: ");
-        scanf("%d", &respuesta);
+        do {
+            printf("Introduce el número de tu respuesta, el número debe estar entre 1 y 4: ");
+            scanf("%d", &respuesta);
+
+            if (respuesta < 1 || respuesta > 4) {
+                printf("Número inválido. Por favor, ingrese un número entre 1 y 4.\n");
+            }
+        } while (respuesta < 1 || respuesta > 4);
 
         if (respuesta - 1 == preguntas[i].respuestaCorrecta) {
             puntuacion += 50;
-            printf("Correcto! Puntuación actual: %d\n\n", puntuacion);
+            printf("¡Correcto! Puntuación actual: %d\n\n", puntuacion);
         } else {
             fallos++;
             printf("Incorrecto! Has fallado %d veces.\n\n", fallos);
