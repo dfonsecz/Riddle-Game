@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <ncurses.h>
 #include <string.h>
-#include "menu.h"
+#include "../include/menu.h"
 
 WINDOW *menuWin() {
     // Obtener parámetros de la terminal para centrar la ventana
