@@ -25,6 +25,18 @@ void leer_preguntas(const char *nombre_archivo) {
     fclose(archivo);
 }
 
+int verificarCategoria(char categoria[]) {
+    if (strcmp(categoria, "Ciencia") == 0 ||
+        strcmp(categoria, "Historia") == 0 ||
+        strcmp(categoria, "Entretenimiento") == 0
+    ) {
+        return 1;
+    }
+    else {
+        return 0;
+    }
+}
+
 void agregarNuevaPregunta(const char *nombre_archivo) {
     FILE *archivo = fopen(nombre_archivo, "a");
     if (archivo == NULL) {
@@ -34,9 +46,18 @@ void agregarNuevaPregunta(const char *nombre_archivo) {
 
     Pregunta Nuevapregunta;
 
-    printf("Ingrese la categoría: ");
-    fgets(Nuevapregunta.categoria, sizeof(Nuevapregunta.categoria), stdin);
-    Nuevapregunta.categoria[strcspn(Nuevapregunta.categoria, "\n")] = '\0';
+    while (1) {
+        printf("Ingrese la categoría (Ciencia, Historia, Entretenimiento): ");
+        fgets(Nuevapregunta.categoria, sizeof(Nuevapregunta.categoria), stdin);
+        Nuevapregunta.categoria[strcspn(Nuevapregunta.categoria, "\n")] = '\0';
+
+        // Verificar la categoría ingresada usando la función
+        if (verificarCategoria(Nuevapregunta.categoria) == 0) {
+            printf("Categoría inválida. Ingrese una de estas opciones:\nCiencia\nHistoria\nEntretenimiento");
+        } else {
+            break; // Salir del bucle si la categoría es válida
+        }
+    }
 
     printf("Ingrese la pregunta: ");
     fgets(Nuevapregunta.pregunta, sizeof(Nuevapregunta.pregunta), stdin);
