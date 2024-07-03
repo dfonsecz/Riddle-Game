@@ -228,11 +228,9 @@ void editarPregunta(const char *nombre_archivo) {
     fclose(archivo);
 }
 
-
-
 int main() {
     int opcion;
-    const char *nombre_archivo = "preguntas.txt";
+    const char *nombre_archivo = "preguntas";
 
     printf("opciones\n 1.leer archivo\n 2.agregar pregunta\n 3.Editar pregunta\n ");
     scanf("%d", &opcion);
