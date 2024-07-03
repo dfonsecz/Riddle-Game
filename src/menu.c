@@ -30,14 +30,14 @@ WINDOW *menuWin() {
     };
 
     // Definir submenús con diferentes números de opciones
-    char *juego_options[] = {"Nuevo juego", "Cargar juego"};
-    char *categoria_options[] = {"Ciencia", "Historia", "Entretenimiento", "Mixto"};
-    char *ver_options[] = {"Puntuación", "Terminal"};
+    char *gameOpt[] = {"Nuevo juego", "Cargar juego"};
+    char *categOpt[] = {"Ciencia", "Historia", "Entretenimiento", "Mixto"};
+    char *seeOpt[] = {"Puntuación", "Terminal"};
 
     SubMenu submenus[3] = {
-        {juego_options, 2},
-        {categoria_options, 4},
-        {ver_options, 2}
+        {gameOpt, 2},
+        {categOpt, 4},
+        {seeOpt, 2}
     };
 
     // Imprimir los elementos del menú superior
@@ -49,7 +49,7 @@ WINDOW *menuWin() {
     keypad(menuBar.win, true);
 
     int menu_index = 0;
-    char *submenu_choice = NULL;
+    char *submenuChoice = NULL;
     
     while (1) {
         int choice = wgetch(menuBar.win);
@@ -78,16 +78,28 @@ WINDOW *menuWin() {
 
         // Si se presiona una tecla de menú, mostrar el submenú
         if (choice == 'j' || choice == 'c' || choice == 'v') {
-            submenu_choice = submenuWin(menuBar.win, submenus[menu_index]);
+            submenuChoice = submenuWin(menuBar.win, submenus[menu_index]);
+
+            char categoryChoice[20];
 
             // Manejar la opción seleccionada del submenú
-            if (submenu_choice != NULL) {
-                if (strcmp(submenu_choice, "Nuevo juego") == 0) {
-                    // Llamar a la función para iniciar un nuevo juego
+            if (submenuChoice != NULL) {
+                if (strcmp(submenuChoice, "Nuevo juego") == 0) {
+                    // Llamar a la función para iniciar juego
                     openGame(win);
                 }
-                else if (strcmp(submenu_choice, "Cargar juego") == 0) {
+                else if (strcmp(submenuChoice, "Cargar juego") == 0) {
+                    // Llamar a la función para iniciar juego
                     openGame(win);
+                }
+                else if (strcmp(submenuChoice, "Ciencia") == 0){
+                    strcpy(categoryChoice, "Ciencia");
+                }
+                else if (strcmp(submenuChoice, "Historia") == 0){
+                    strcpy(categoryChoice, "Historia");
+                }
+                else if (strcmp(submenuChoice, "Entretenimiento") == 0){
+                    strcpy(categoryChoice, "Entretenimiento");
                 }
             }
         }
