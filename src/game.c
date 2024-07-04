@@ -1,7 +1,7 @@
 #include <ncurses.h>
 #include "../include/game.h"
 
-int openGame(WINDOW *win){
+int openGame(WINDOW *win, char *category){
     // Realizar operaciones en la ventana del juego
     wclear(win);
     box(win, 0, 0);
