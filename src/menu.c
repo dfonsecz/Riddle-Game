@@ -86,20 +86,23 @@ WINDOW *menuWin() {
             if (submenuChoice != NULL) {
                 if (strcmp(submenuChoice, "Nuevo juego") == 0) {
                     // Llamar a la función para iniciar juego
-                    openGame(win);
+                    openGame(win, "Aleatorio");
                 }
                 else if (strcmp(submenuChoice, "Cargar juego") == 0) {
                     // Llamar a la función para iniciar juego
-                    openGame(win);
+                    openGame(win, "Aleatorio");
                 }
                 else if (strcmp(submenuChoice, "Ciencia") == 0){
                     strcpy(categoryChoice, "Ciencia");
+                    openGame(win, categoryChoice);
                 }
                 else if (strcmp(submenuChoice, "Historia") == 0){
                     strcpy(categoryChoice, "Historia");
+                    openGame(win, categoryChoice);
                 }
                 else if (strcmp(submenuChoice, "Entretenimiento") == 0){
                     strcpy(categoryChoice, "Entretenimiento");
+                    openGame(win, categoryChoice);
                 }
             }
         }
