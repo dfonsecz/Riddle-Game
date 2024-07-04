@@ -3,6 +3,6 @@
 
 #include <ncurses.h>
 
-int openGame(WINDOW *win);
+int openGame(WINDOW *win, char *category);
 
 #endif
