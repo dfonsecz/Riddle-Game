@@ -18,7 +18,7 @@ void manejar_alarma(int sig) {
 }
 
 // Aquí se manipula la puntuación del jugador
-void manejar_Puntuacion(Pregunta preguntas[], int numPreguntas) {
+int manejar_Puntuacion(Pregunta preguntas[], int numPreguntas) {
     int puntuacion = 0;
     int fallos = 0;
     int respuesta;
@@ -63,6 +63,8 @@ void manejar_Puntuacion(Pregunta preguntas[], int numPreguntas) {
     }
 
     printf("Puntuación final: %d\n", puntuacion);
+
+    return puntuacion;
 }
 
 int main() {
@@ -77,7 +79,7 @@ int main() {
     int numPreguntas = sizeof(banco_Preguntas) / sizeof(banco_Preguntas[0]);
 
     // Llamar a la función para manejar la puntuación
-    manejar_Puntuacion(banco_Preguntas, numPreguntas);
+    int puntuacion = manejar_Puntuacion(banco_Preguntas, numPreguntas);
 
     return 0;
 }  
