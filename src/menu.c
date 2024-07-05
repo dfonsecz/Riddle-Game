@@ -113,6 +113,7 @@ WINDOW *menuWin() {
                 }
                 else if (strcmp(submenuChoice, "Mixto") == 0){
                     strcpy(categoryChoice, "Mixto");
+                    openGame(win, categoryChoice);
                 }
             }
         }
