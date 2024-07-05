@@ -1,0 +1,61 @@
+Categoría,Pregunta,Opción 1,Opción 2,Opción 3,Opción 4,0
+Entretenimiento,"¿Quién dirigió la película 'Titanic'?" ,Steven Spielberg,James Cameron,Christopher Nolan,Martin Scorsese,1
+Entretenimiento,"¿Qué banda lanzó el álbum 'Abbey Road' en 1969?" ,The Rolling Stones,Pink Floyd,The Beatles,The Who,2
+Entretenimiento,"¿Cuál es el nombre real de la cantante Lady Gaga?",Stefani Germanotta,Britney Spears,Katy Perry,Selena Gomez,0
+Entretenimiento,"¿Qué serie de televisión presenta a un químico convertido en fabricante de metanfetaminas?",Breaking Bad,The Wire,Mad Men,Dexter,0
+Entretenimiento,"¿Quién escribió la serie de libros 'Harry Potter'?",Suzanne Collins,J.R.R. Tolkien,George R.R. Martin,J.K. Rowling,3
+Entretenimiento,"¿Cuál es el videojuego más vendido de todos los tiempos?",Grand Theft Auto V,Minecraft,The Legend of Zelda,Super Mario Bros,1
+Entretenimiento,"¿Quién es conocido como 'El Rey del Pop'?",Michael Jackson,Elvis Presley,Prince,Justin Timberlake,0
+Entretenimiento,"¿Cuál película ganó el Oscar a Mejor Película en 2020?",Joker,1917,Parasite,Once Upon a Time in Hollywood,2
+Entretenimiento,"¿Qué actriz interpretó a Katniss Everdeen en 'Los Juegos del Hambre'?",Kristen Stewart,Emma Watson,Scarlett Johansson,Jennifer Lawrence,3
+Entretenimiento,"¿Qué famoso cantante lanzó el álbum 'Thriller'?",David Bowie,Prince,Michael Jackson,Madonna,2
+Entretenimiento,"¿Qué serie de televisión es conocida por la frase 'Winter is coming'?",Game of Thrones,Vikings,The Witcher,The Crown,0
+Entretenimiento,"¿Quién es el autor de la novela 'Cien años de soledad'?",Mario Vargas Llosa,Gabriel García Márquez,Isabel Allende,Julio Cortázar,1
+Entretenimiento,"¿Qué película de Disney presenta a una princesa llamada Moana?",Moana,Frozen,Brave,Tangled,0
+Entretenimiento,"¿Qué banda británica es conocida por el álbum 'The Dark Side of the Moon'?",Queen,The Beatles,Pink Floyd,Led Zeppelin,2
+Entretenimiento,"¿Qué actor interpretó a Jack Dawson en 'Titanic'?",Johnny Depp,Brad Pitt,Leonardo DiCaprio,Tom Cruise,2
+Entretenimiento,"¿Quién creó el universo cinematográfico de Marvel?",Kevin Feige,Joss Whedon,Jon Favreau,James Gunn,0
+Entretenimiento,"¿Qué serie de televisión sigue la vida de los empleados de Dunder Mifflin?",Parks and Recreation,Brooklyn Nine-Nine,Friends,The Office,3
+Entretenimiento,"¿Qué película de Pixar cuenta la historia de un robot llamado Wall-E?",Up,Toy Story,Wall-E,Finding Nemo,2
+Entretenimiento,"¿Quién interpretó a Iron Man en las películas de Marvel?",Robert Downey Jr.,Chris Evans,Mark Ruffalo,Chris Hemsworth,0
+Entretenimiento,"¿Qué serie de televisión es conocida por el grupo de amigos que viven en Nueva York?",Seinfeld,How I Met Your Mother,The Big Bang Theory,Friends,3
+Entretenimiento,"¿Qué cantante es conocida como 'La Reina del Pop'?",Lady Gaga,Madonna,Beyoncé,Rihanna,1
+Entretenimiento,"¿Cuál es el nombre del dragón en 'Cómo entrenar a tu dragón'?",Smaug,Drogon,Toothless,Falkor,2
+Entretenimiento,"¿Qué película animada de Disney presenta a un ciervo llamado Bambi?",Dumbo,El Rey León,Bambi,La Dama y el Vagabundo,2
+Entretenimiento,"¿Qué videojuego presenta a un fontanero llamado Mario?",Super Mario Bros,Sonic the Hedgehog,Donkey Kong,Pac-Man,0
+Entretenimiento,"¿Quién dirigió la película 'Pulp Fiction'?",Martin Scorsese,Francis Ford Coppola,Steven Spielberg,Quentin Tarantino,3
+Ciencia,"¿Cuál es el elemento más abundante en el universo?",Oxígeno,Carbono,Nitrógeno,Hidrógeno,3
+Ciencia,"¿Qué planeta es conocido como el 'Planeta Rojo'?",Marte,Júpiter,Saturno,Venus,0
+Ciencia,"¿Cuál es la fórmula química del agua?",CO2,O2,H2O,NaCl,2
+Ciencia,"¿Qué partícula subatómica tiene carga negativa?",Protón,Electrón,Neutrón,Positrón,0
+Ciencia,"¿Qué teoría explica el origen del universo?",Big Bang,Teoría de la Evolución,Relatividad,Mecánica Cuántica,0
+Ciencia,"¿Quién es conocido como el padre de la física moderna?",Isaac Newton,Galileo Galilei,Niels Bohr,Albert Einstein,3
+Ciencia,"¿Cuál es el órgano más grande del cuerpo humano?",El corazón,El hígado,La piel,El cerebro,2
+Ciencia,"¿Qué gas es esencial para la respiración humana?",Oxígeno,Nitrógeno,Dióxido de Carbono,Hidrógeno,0
+Ciencia,"¿Qué científico propuso la teoría de la evolución por selección natural?",Charles Darwin,Gregor Mendel,Louis Pasteur,James Watson,0
+Ciencia,"¿Cuál es la distancia promedio entre la Tierra y el Sol?",100 millones de kilómetros,200 millones de kilómetros,150 millones de kilómetros,50 millones de kilómetros,2
+Ciencia,"¿Qué planeta tiene los anillos más prominentes?",Júpiter,Saturno,Urano,Neptuno,1
+Ciencia,"¿Qué unidad se utiliza para medir la intensidad de corriente eléctrica?",Amperio,Voltio,Ohmio,Vatio,0
+Ciencia,"¿Qué tipo de animal es una ballena?",Pez,Reptil,Mamífero,Anfibio,2
+Ciencia,"¿Qué es conocida como la 'unidad básica de la vida'?",Molécula,Átomo,Organelo,Célula,3
+Ciencia,"¿Cuál es el planeta más grande del sistema solar?",Júpiter,Saturno,Urano,Neptuno,0
+Ciencia,"¿Qué mineral es el más duro conocido por el hombre?",Cuarzo,Oro,Diamante,Grafito,2
+Ciencia,"¿Qué órgano del cuerpo humano produce insulina?",Hígado,Riñón,Páncreas,Estómago,2
+Ciencia,"¿Qué es el ADN?",Ácido desoxirribonucleico,Ácido ribonucleico,Adenina,Timina,0
+Ciencia,"¿Qué fuerza mantiene a los planetas en órbita alrededor del Sol,Magnetismo,Gravedad,Electrostática,Fuerza Nuclear,1
+Ciencia,"¿Qué enfermedad es causada por el virus de la inmunodeficiencia humana (VIH)?",SIDA,Gripe,Malaria,Tuberculosis,0
+Ciencia,"¿Cuál es la velocidad de la luz en el vacío?",300000 km/s,150000 km/s,400000 km/s, 200000 km/s,0
+Ciencia,"¿Qué planeta es conocido por sus enormes tormentas y manchas rojas?",Marte,Saturno,Júpiter,Venus,2
+Ciencia,"¿Qué tipo de célula transporta oxígeno en la sangre?",Glóbulo blanco,Plaqueta,Glóbulo rojo,Célula madre,2
+Ciencia,"¿Qué fenómeno meteorológico es medido por la escala de Richter?",Huracanes,Tornados,Inundaciones,Terremotos,3
+Ciencia,"¿Qué tipo de onda es la luz?",Sonora,Sísmica,Electromagnética,Mecánica,2
+Historia,"¿En qué año comenzó la Segunda Guerra Mundial?",1941,1939,1938,1945,1
+Historia,"¿Quién fue el primer presidente de los Estados Unidos?",George Washington,Thomas Jefferson,Abraham Lincoln,John Adams,0
+Historia,"¿Qué civilización construyó las pirámides de Giza ,Maya,Egipcia,Inca,Azteca,1
+Historia,"¿En qué año cayó el Muro de Berlín?",1989,1987,1991,1985,0
+Historia,"¿Quién descubrió América en 1492?",Hernán Cortés,Vasco da Gama,Cristóbal Colón,Fernando de Magallanes,2
+Historia,"¿Qué país fue liderado por Adolf Hitler durante la Segunda Guerra Mundial?",Italia,Alemania,Japón,Francia,1
+Historia,"¿Qué movimiento luchó por los derechos civiles de los afroamericanos en los Estados Unidos?",Movimiento por los Derechos Civiles,Movimiento Obrero,Movimiento Feminista,Movimiento Ecologista,0
+Historia,"¿Qué emperador romano se convirtió al cristianismo y proclamó el Edicto de Milán?",Julio César,Nerón,Constantino,Augusto,2
+Historia,"¿Qué tratado puso fin a la Primera Guerra Mundial?",Tratado de Tordesillas,Tratado de Versalles,Tratado de París,Tratado de Ginebra,1
+Ciencia,"¿Quien fue el inventor de la bombilla?",Thomas Edison,Nikola Tesla,Albert Einstein,Isaac Newton,2
