@@ -13,6 +13,7 @@ sources = [
   'src/menu.c',
   'src/submenu.c',
   'src/matches.c',
+  'src/puntuacion.c',
 ]
 
 # Crear el ejecutable
