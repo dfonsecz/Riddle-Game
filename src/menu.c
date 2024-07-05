@@ -16,6 +16,13 @@ WINDOW *menuWin() {
     box(win, 0, 0);
     wrefresh(win);
 
+    // Imprimir mensaje de bienvenida
+    box(win, 0, 0);
+    mvwprintw(win, 2, 4, "Riddle Game");
+    mvwprintw(win, 4, 4, "Bienvenido. Puede iniciar una nueva partida o cargar");
+    mvwprintw(win, 5, 4, "una partida anterior en 'Juego'.");
+    wrefresh(win);
+
     // Definir la barra de menú superior
     Menu menus[3] = {
         {2, "Juego", 'j'},
@@ -86,11 +93,11 @@ WINDOW *menuWin() {
             if (submenuChoice != NULL) {
                 if (strcmp(submenuChoice, "Nuevo juego") == 0) {
                     // Llamar a la función para iniciar juego
-                    openGame(win, "Aleatorio");
+                    openGame(win, "Mixto");
                 }
                 else if (strcmp(submenuChoice, "Cargar juego") == 0) {
                     // Llamar a la función para iniciar juego
-                    openGame(win, "Aleatorio");
+                    openGame(win, "Mixto");
                 }
                 else if (strcmp(submenuChoice, "Ciencia") == 0){
                     strcpy(categoryChoice, "Ciencia");
@@ -103,6 +110,9 @@ WINDOW *menuWin() {
                 else if (strcmp(submenuChoice, "Entretenimiento") == 0){
                     strcpy(categoryChoice, "Entretenimiento");
                     openGame(win, categoryChoice);
+                }
+                else if (strcmp(submenuChoice, "Mixto") == 0){
+                    strcpy(categoryChoice, "Mixto");
                 }
             }
         }

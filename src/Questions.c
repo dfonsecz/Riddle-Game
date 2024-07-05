@@ -232,7 +232,7 @@ int main() {
     int opcion;
     const char *nombre_archivo = "preguntas";
 
-    printf("opciones\n 1.leer archivo\n 2.agregar pregunta\n 3.Editar pregunta\n ");
+    printf("Opciones\n 1.Leer archivo\n 2.Agregar pregunta\n 3.Editar pregunta\n ");
     scanf("%d", &opcion);
     while (getchar() != '\n'); // limpiar el búfer de entrada después de leer la opción
 
@@ -244,7 +244,7 @@ int main() {
         editarPregunta(nombre_archivo);
     } 
     else {
-        printf("opcion invalida\n");
+        printf("Opción inválida\n");
     } 
 
     return 0;
