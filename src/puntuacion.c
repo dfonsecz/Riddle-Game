@@ -24,23 +24,51 @@ int leerPreguntasDesdeArchivo(const char *nombreArchivo, Pregunta preguntas[], i
     return numPreguntas;
 }
 
-// Función para seleccionar una pregunta aleatoria
-Pregunta *seleccionarPreguntaAleatoria(Pregunta preguntas[], int numPreguntas, char *category) {
-    int indicePregunta = rand() % numPreguntas;
-    return &preguntas[indicePregunta];
+
+// Función para seleccionar una pregunta aleatoria de una categoría específica
+Pregunta *seleccionarPreguntaAleatoria(Pregunta preguntas[], int numPreguntas, const char *categoria) {
+    Pregunta *preguntasFiltradas[numPreguntas];
+    int numPreguntasFiltradas = 0;
+
+    // Filtrar preguntas por categoría
+    for (int i = 0; i < numPreguntas; i++) {
+        if (strcmp(preguntas[i].categoria, categoria) == 0 || strcmp(categoria, "Mixto") == 0) {
+            preguntasFiltradas[numPreguntasFiltradas] = &preguntas[i];
+            numPreguntasFiltradas++;
+        }
+    }
+
+    if (numPreguntasFiltradas == 0) {
+        return NULL; // No hay preguntas en la categoría especificada
+    }
+
+    // Seleccionar una pregunta aleatoria de las preguntas filtradas
+    int indicePregunta = rand() % numPreguntasFiltradas;
+    return preguntasFiltradas[indicePregunta];
 }
 
 // Función para mostrar una pregunta y sus opciones
-void mostrarPregunta(WINDOW *win, Pregunta *p) {
+int mostrarPregunta(WINDOW *win, Pregunta *p) {
     wclear(win);
     box(win, 0, 0);
 
-    mvwprintw(win, 2, 4, "%s", p->pregunta);
+    mvwprintw(win, 3, 4, "%s", p->pregunta);
     for (int j = 0; j < 4; j++) {
-        mvwprintw(win, 4 + j, 4, "%d. %s", j + 1, p->opciones[j]);
+        mvwprintw(win, 5 + j, 4, "%d. %s", j + 1, p->opciones[j]);
     }
 
     wrefresh(win);
+
+    int choice;
+    while (1) {
+        int ch = wgetch(win);
+        if (ch >= '1' && ch <= '4') {
+            choice = ch - '0'; // Convertir el carácter a número
+            break;
+        }
+    }
+
+    return choice;
 }
 
 // Función para obtener la respuesta del usuario
