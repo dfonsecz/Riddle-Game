@@ -14,10 +14,9 @@ typedef struct {
 } Pregunta;
 
 int leerPreguntasDesdeArchivo(const char *nombreArchivo, Pregunta preguntas[], int maxPreguntas);
-Pregunta *seleccionarPreguntaAleatoria(Pregunta preguntas[], int numPreguntas, char *category);
-void mostrarPregunta(WINDOW *win, Pregunta *p);
-int obtenerRespuestaUsuario(WINDOW *win);
-
-void openGame(WINDOW *win, char *category);
+Pregunta *seleccionarPreguntaAleatoria(Pregunta preguntas[], int numPreguntas, const char *categoria);
+Pregunta *seleccionarPreguntaAleatoriaPorCategoria(Pregunta preguntas[], int numPreguntas, const char *categoria);
+int mostrarPregunta(WINDOW *win, Pregunta *p);
+void openGame(WINDOW *win, const char *category);
 
 #endif
