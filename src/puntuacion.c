@@ -1,25 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <unistd.h>
-#include <signal.h>
-#include <time.h>
-
-#define MAX_PREGUNTAS 100 // Define MAX_PREGUNTAS
-
-// Estructura para almacenar una pregunta con opciones
-typedef struct {
-    char categoria[50];
-    char pregunta[256];
-    char opciones[4][50];
-    int respuestaCorrecta; // Índice de la respuesta correcta (0-3)
-} Pregunta;
-
-volatile sig_atomic_t timeout = 0;
-
-void manejar_alarma(int sig) {
-    timeout = 1;
-}
+#include "game.h"
 
 // Función para leer preguntas desde un archivo
 int leerPreguntasDesdeArchivo(const char *nombreArchivo, Pregunta preguntas[], int maxPreguntas) {
@@ -33,7 +15,7 @@ int leerPreguntasDesdeArchivo(const char *nombreArchivo, Pregunta preguntas[], i
     char linea[512];
     while (fgets(linea, sizeof(linea), archivo) && numPreguntas < maxPreguntas) {
         Pregunta *p = &preguntas[numPreguntas];
-        sscanf(linea, "%[^,],\"%[^\"]\",%[^,],%[^,],%[^,],%[^,],%d",
+        sscanf(linea, "%[^,],\"%255[^\"]\",%49[^,],%49[^,],%49[^,],%49[^,],%d",
                p->categoria, p->pregunta, p->opciones[0], p->opciones[1], p->opciones[2], p->opciones[3], &p->respuestaCorrecta);
         numPreguntas++;
     }
@@ -42,69 +24,36 @@ int leerPreguntasDesdeArchivo(const char *nombreArchivo, Pregunta preguntas[], i
     return numPreguntas;
 }
 
-// Función para manejar la puntuación del jugador
-void manejar_Puntuacion(Pregunta preguntas[], int numPreguntas) {
-    int puntuacion = 0;
-    int fallos = 0;
-    int respuesta;
-    char buffer[10];
-
-    srand(time(NULL)); // Inicializa el generador de números aleatorios
-
-    for (int i = 0; i < numPreguntas; i++) {
-        int indicePregunta = rand() % numPreguntas;
-        Pregunta *p = &preguntas[indicePregunta];
-
-        printf("%s\n", p->pregunta);
-        for (int j = 0; j < 4; j++) {
-            printf("%d. %s\n", j + 1, p->opciones[j]);
-        }
-
-        printf("Para responder, escriba un dígito entre 1 y 4 en 20 segundos: ");
-        fflush(stdout);
-
-        signal(SIGALRM, manejar_alarma);
-        alarm(20);
-        timeout = 0;
-
-        if (fgets(buffer, sizeof(buffer), stdin) != NULL) {
-            alarm(0); // Detiene el cronómetro si el usuario responde a tiempo
-            if (sscanf(buffer, "%d", &respuesta) == 1 && respuesta >= 1 && respuesta <= 4) {
-                if (respuesta - 1 == p->respuestaCorrecta) {
-                    puntuacion += 50;
-                    printf("¡Correcto! Puntuación actual: %d\n\n", puntuacion);
-                } else {
-                    fallos++;
-                    printf("Incorrecto! Has fallado %d veces.\n\n", fallos);
-                }
-            } else {
-                printf("Número inválido. Por favor, ingrese un número entre 1 y 4.\n");
-                i--; // Repite la pregunta
-            }
-        } else {
-            printf("\n¡Tiempo agotado! Has tardado más de 20 segundos.\n");
-            fallos++;
-        }
-
-        if (fallos == 3) {
-            printf("Has fallado 3 veces. Fin del juego.\n");
-            break;
-        }
-    }
-
-    printf("Puntuación final: %d\n", puntuacion);
+// Función para seleccionar una pregunta aleatoria
+Pregunta *seleccionarPreguntaAleatoria(Pregunta preguntas[], int numPreguntas, char *category) {
+    int indicePregunta = rand() % numPreguntas;
+    return &preguntas[indicePregunta];
 }
 
-int main() {
-    Pregunta banco_Preguntas[MAX_PREGUNTAS];
-    int numPreguntas = leerPreguntasDesdeArchivo("preguntas.txt", banco_Preguntas, MAX_PREGUNTAS); // Especifica el nombre del archivo
+// Función para mostrar una pregunta y sus opciones
+void mostrarPregunta(WINDOW *win, Pregunta *p) {
+    wclear(win);
+    box(win, 0, 0);
 
-    if (numPreguntas == 0) {
-        printf("No se pudieron leer preguntas del archivo.\n");
-        return 1;
+    mvwprintw(win, 2, 4, "%s", p->pregunta);
+    for (int j = 0; j < 4; j++) {
+        mvwprintw(win, 4 + j, 4, "%d. %s", j + 1, p->opciones[j]);
     }
 
-    manejar_Puntuacion(banco_Preguntas, numPreguntas);
+    wrefresh(win);
+}
 
-    return 0;
+// Función para obtener la respuesta del usuario
+int obtenerRespuestaUsuario(WINDOW *win) {
+    int respuesta = -1;
+    char buffer[10];
+
+    echo();
+    mvwgetstr(win, 9, 4, buffer);
+    noecho();
+
+    if (sscanf(buffer, "%d", &respuesta) == 1 && respuesta >= 1 && respuesta <= 4) {
+        return respuesta;
+    }
+    return -1; // Indica una respuesta inválida
 }
