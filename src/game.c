@@ -33,6 +33,7 @@ void openGame(WINDOW *win, const char *categoria) {
 
             ch = wgetch(win);
             if (ch == 27) {
+                match(puntuacion);
                 break;
             }
             werase(win);  // Limpiar la ventana para la siguiente pregunta
