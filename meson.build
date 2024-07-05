@@ -12,6 +12,7 @@ sources = [
   'src/main.c',
   'src/menu.c',
   'src/submenu.c',
+  'src/matches.c',
 ]
 
 # Crear el ejecutable
