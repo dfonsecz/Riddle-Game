@@ -16,20 +16,23 @@ char* getTime() {
     return formattedTime;
 }
 
-int match() {
+int match(int puntuacion) {
     FILE *file;
-    char fileName[] = "partidas";
-    char buffer[255];
+    char fileName[] = "partidas.csv";
 
+    // Abrir el archivo en modo append
     file = fopen(fileName, "a");
     if (file == NULL) {
-        perror("Error al abrir el file");
+        perror("Error al abrir el archivo");
         return 1;
     }
 
-    // Añadir enlace a puntuacion.c
+    char puntuacionString[20];
+    sprintf(puntuacionString, "%d", puntuacion);
 
-    fprintf(file, "%s\n", getTime());
+    fprintf(file, "%s,%s\n", getTime(), puntuacionString);
 
     fclose(file);
+
+    return 0;
 }
