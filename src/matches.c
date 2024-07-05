@@ -20,11 +20,11 @@ int match(int puntuacion) {
     FILE *file;
     char fileName[] = "partidas.csv";
 
-    // Abrir el archivo en modo append
-    file = fopen(fileName, "a");
+    // Tratar de abrir en modo read/write
+    file = fopen(fileName, "r+");
     if (file == NULL) {
-        perror("Error al abrir el archivo");
-        return 1;
+        // Sino
+        file = fopen(fileName, "a");
     }
 
     char puntuacionString[20];
