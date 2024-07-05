@@ -18,5 +18,6 @@ Pregunta *seleccionarPreguntaAleatoria(Pregunta preguntas[], int numPreguntas, c
 Pregunta *seleccionarPreguntaAleatoriaPorCategoria(Pregunta preguntas[], int numPreguntas, const char *categoria);
 int mostrarPregunta(WINDOW *win, Pregunta *p);
 void openGame(WINDOW *win, const char *category);
+int match(int puntuacion);
 
 #endif
