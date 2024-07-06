@@ -124,7 +124,7 @@ Licencia de libre uso.
 ## Contacto
 En caso de alguna duda con respecto al programa, se puede contactar a las siguientes personas:
 * Daniela Fonseca, github: @dfonsecz, email: daniela.fonsecazumbado@ucr.ac.cr
-* Fabián González,github @fabegu01, email: fabian.gonzalezurena@ucr.ac.cr
+* Fabián González, github @fabegu01, email: fabian.gonzalezurena@ucr.ac.cr
 * Asbel Mena @chimichurre
 
 ## Referencias
