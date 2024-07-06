@@ -230,7 +230,7 @@ void editarPregunta(const char *nombre_archivo) {
 
 int main() {
     int opcion;
-    const char *nombre_archivo = "preguntas";
+    const char *nombre_archivo = "../preguntas.csv";
 
     printf("Opciones\n 1.Leer archivo\n 2.Agregar pregunta\n 3.Editar pregunta\n ");
     scanf("%d", &opcion);
