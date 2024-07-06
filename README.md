@@ -90,15 +90,15 @@ Este archivo utiliza time.h y stdlib.h, primeramente tiene una función que obti
 
 Después de escribir `./build2/game` en la terminal de linux, al usuario se le muestra lo siguiente:
 
-IMAGEN
+![1](img/1.png)
 
 Por consiguiente, se puede comenzar a jugar apretando la tecla “j”, posteriormente la opción nuevo juego y con las flechas se escoge la opción “nuevo juego” para que aparezca la primera pregunta. Para elegir la opción que deseas solo oprime un número del 1 al 4: 
 
-IMAGEN
+![2](img/2.png)
 
 Seguidamente, para volver al menú nada más se teclea ESC. Para leer, agregar o editar una preguntas, se tiene que escribir ./src/preguntas y escoger cualquiera de las opciones previamente mencionadas. En este caso se oprimió la tecla 1 como se muestra a continuación:
 
-IMAGEN
+![3](img/3.png)
 
 ## Conclusiones 
 
