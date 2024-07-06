@@ -2,14 +2,14 @@
 #include "../include/menu.h"
 
 int main() {
-    initscr();
-    noecho();
-    cbreak();
+    initscr(); // inicializar ventana de ncurses
+    noecho(); // deshabilitar echo de caracteres
+    cbreak(); // recibe cada tecla que se presiona sin esperar a enter
     
-    // Start the main menu
+    // Inicializar el menú principal
     menuWin();
     
-    // Clean up
+    // Limpiar pantalla
     endwin();
     return 0;
 }
