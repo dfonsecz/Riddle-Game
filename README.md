@@ -127,9 +127,9 @@ Daniela Fonseca, github: @dfonsecz, email: daniela.fonsecazumbado@ucr.ac.cr
 Fabián González,github @fabegu01, email: fabian.gonzalezurena@ucr.ac.cr
 Asbel Mena @chimichurre
 
-##Referencias
+## Referencias
 A continuación, es posible encontrar documentación de las librerías utilizadas en la elaboración de este proyecto.
-IBM i 7.5. (s. f.). https://www.ibm.com/docs/es/i/7.5?topic=files-stdlibh
-IBM i 7.5. (s. f.-b). https://www.ibm.com/docs/es/i/7.5?topic=files-timeh
-IBM i 7.5. (s. f.-c). https://www.ibm.com/docs/es/i/7.5?topic=files-stringh
-ncurses Manpages https://invisible-island.net/ncurses/man/ncurses.3x.html
+1. IBM i 7.5. (s. f.). https://www.ibm.com/docs/es/i/7.5?topic=files-stdlibh
+2. IBM i 7.5. (s. f.-b). https://www.ibm.com/docs/es/i/7.5?topic=files-timeh
+3. IBM i 7.5. (s. f.-c). https://www.ibm.com/docs/es/i/7.5?topic=files-stringh
+4. ncurses Manpages https://invisible-island.net/ncurses/man/ncurses.3x.html
